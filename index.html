@@ -36,14 +36,22 @@
       <form id="smsForm" method="POST" action="/api/subscribe">
         <label for="name">Full name</label>
         <input id="name" name="name" required placeholder="Jane Doe" />
+        
         <label for="phone">Mobile phone</label>
         <input id="phone" name="phone" required placeholder="+1XXXXXXXXXX" pattern="^\+?[0-9\s\-\(\)]{7,20}$" />
+        
         <div class="checkbox">
           <input type="checkbox" id="consent" name="consent" value="1" required />
           <label for="consent">
-            I agree to receive SMS messages from Elevate Key Home (appointments, updates, promotions). Reply <strong>STOP</strong> to unsubscribe. View our <a href="/privacy.html">Privacy Policy</a>.
+            I agree to receive SMS messages from Elevate Key Home (appointments, updates, promotions). 
+            Reply <strong>STOP</strong> to unsubscribe. 
+            View our <a href="/privacy.html">Privacy Policy</a>. 
+            <br><br>
+            <strong>Click here for Privacy Policy:</strong> 
+            <a href="/privacy.html" target="_blank" rel="noopener noreferrer">https://elevatekeyhome.com/privacy.html</a>
           </label>
         </div>
+
         <input type="hidden" name="source" value="site-signup" />
         <button type="submit">Sign up</button>
       </form>
@@ -54,7 +62,7 @@
     <section class="contact">
       <h3>Contact</h3>
       <p>Email: <a href="mailto:support@elevatekeyhome.com">support@elevatekeyhome.com</a></p>
-      <p>Phone: (###) ###-####</p>
+      <p>Phone: (531) 346-0136</p>
       <p>Address: 123 Main St, City, State ZIP</p>
     </section>
   </main>
@@ -88,4 +96,3 @@ document.getElementById('smsForm').addEventListener('submit', async (e) => {
 </script>
 </body>
 </html>
-
